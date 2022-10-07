@@ -207,6 +207,11 @@ section {
 .welcome img {
   width: 80%;
   margin-top: 50px;
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+.welcome img:hover {
+  filter: grayscale(0);
 }
 
 .feature {
