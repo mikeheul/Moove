@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", (event) => {
 
     // console.log("DOM entièrement chargé et analysé");
-    
+
     // -------------- VIDEO PLAY PAUSE ------------
     const video = document.querySelector('#video');
     const btnPlayPause = document.querySelector('.play');
@@ -48,7 +48,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             }
         },
     });
-    
+
     // -------------- COUNT UP STATS ------------
     $(document).ready(function ($) {
         $('.count-number').counterUp({
@@ -61,21 +61,21 @@ window.addEventListener("DOMContentLoaded", (event) => {
     let sortBtn = document.querySelector('.filter-menu').children;
     let sortItem = document.querySelector('.filter-item').children;
 
-    for(let i = 0; i < sortBtn.length; i++){
-        sortBtn[i].addEventListener('click', function(){
-            for(let j = 0; j< sortBtn.length; j++){
+    for (let i = 0; i < sortBtn.length; i++) {
+        sortBtn[i].addEventListener('click', function () {
+            for (let j = 0; j < sortBtn.length; j++) {
                 sortBtn[j].classList.remove('current');
             }
-    
+
             this.classList.add('current');
-            
+
             let targetData = this.getAttribute('data-target');
-            
-            for(let k = 0; k < sortItem.length; k++){
+
+            for (let k = 0; k < sortItem.length; k++) {
                 sortItem[k].classList.remove('active');
                 sortItem[k].classList.add('delete');
-    
-                if(sortItem[k].getAttribute('data-item') == targetData || targetData == "all"){
+
+                if (sortItem[k].getAttribute('data-item') == targetData || targetData == "all") {
                     sortItem[k].classList.remove('delete');
                     sortItem[k].classList.add('active');
                 }
@@ -83,4 +83,3 @@ window.addEventListener("DOMContentLoaded", (event) => {
         });
     }
 })
-
