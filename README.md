@@ -1,4 +1,4 @@
-# TEMPLATE_Moove
+# Moove
 
 - SwiperJS clients
 - Gallery filter
